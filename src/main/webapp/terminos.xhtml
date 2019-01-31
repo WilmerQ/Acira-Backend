@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      lang="es">
+    <h:head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>Consola de Administrador</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+        <!-- Bootstrap 3.3.6 -->
+        <link rel="stylesheet" href="css/sitio/bootstrap/css/bootstrap.min.css"/>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"/>
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"/>
+        <!-- Theme style -->
+        <link rel="stylesheet" href="css/sitio/dist/css/AdminLTE.min.css"/>
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+             folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="css/sitio/dist/css/skins/_all-skins.min.css"/>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </h:head>
+    <h:body class="hold-transition skin-blue layout-top-nav">
+        <!-- Site wrapper -->
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container" style="text-align: center">
+                        <div  class="navbar-header" style="margin-left: 5px;margin-top: 4px">
+                            <img height="42px" width="42px" src="anexos/logo_app_mini.png" class="logo-mini"/>
+                            <span class="logo-lg"><b>ACIRA SECURITY</b></span>
+                            <!--<a class="navbar-brand"><b>Admin</b>LTE</a>-->
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <div class="container">
+                    <!-- Main content -->
+                    <section class="content no-padding">
+                        <div class="box box-default">
+                            <div class="box-body">
+                                <h:outputText value="#{MbTerminosAcira.contenido}" escape="false"/>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+
+                <!-- /.content -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="css/sitio/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <!-- Bootstrap 3.3.6 -->
+        <script src="css/sitio/bootstrap/js/bootstrap.min.js"></script>
+        <!-- SlimScroll -->
+        <script src="css/sitio/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="css/sitio/plugins/fastclick/fastclick.js"></script>
+        <!-- AdminLTE App -->
+        <script src="css/sitio/dist/js/app.min.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="css/sitio/dist/js/demo.js"></script>
+    </h:body>
+</html>

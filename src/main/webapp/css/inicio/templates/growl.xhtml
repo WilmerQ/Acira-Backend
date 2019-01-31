@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <ui:composition>
+        <h:panelGroup id="growl-total">
+            <p:growl id="growl-info" showDetail="true"  rendered="#{facesContext.maximumSeverity.ordinal eq 0}"/> 
+            <p:growl id="growl-warn" showDetail="true"  rendered="#{facesContext.maximumSeverity.ordinal eq 1}"/> 
+            <p:growl id="growl-error" showDetail="true"  rendered="#{facesContext.maximumSeverity.ordinal eq 2}"/> 
+            <p:growl id="growl-fatal" showDetail="true" rendered="#{facesContext.maximumSeverity.ordinal eq 3}"/> 
+        </h:panelGroup>
+        <!--
+            0 -> info
+            1 -> warn
+            2 -> error
+            3 -> fatal
+        -->
+    </ui:composition>
+</html>

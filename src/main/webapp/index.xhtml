@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      lang="es">
+
+    <h:head>
+
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <title>ACIRA Web</title>
+
+        <!-- Bootstrap -->
+        <link href="css/inicio/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <!-- Font Awesome -->
+        <link href="css/inicio/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+        <!-- NProgress -->
+        <link href="css/inicio/vendors/nprogress/nprogress.css" rel="stylesheet"/>
+        <!-- Animate.css -->
+        <link href="css/inicio/vendors/animate.css/animate.min.css" rel="stylesheet"/>
+
+        <!-- Custom Theme Style -->
+        <link href="css/inicio/build/css/custom.min.css" rel="stylesheet"/>
+
+        <ui:include src="css/inicio/templates/growl.xhtml" />
+    </h:head>
+
+    <body class="login">
+        <div>
+            <a class="hiddenanchor" id="signup"></a>
+            <a class="hiddenanchor" id="signin"></a>
+
+            <div class="login_wrapper">
+                <div class="animate form login_form">
+
+                    <section class="login_content">
+                        <h:form id="form">
+                            <p:growl id="growl" showDetail="true" />
+                            <h1>ACIRA WEB</h1>
+                            <div class="image" style="alignment-adjust: central">
+                                <div id="crop-avatar" style="margin-left: 35%; margin-right: 32%">
+                                    <!-- Current avatar -->
+                                    <img class="img-responsive avatar-view" src="anexos/logo_app.png" alt="Avatar"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div>
+                                <p:inputText id="nombreUsuario" type="text" styleClass="form-control" placeholder="Nombre Usuario" value="#{MbUsuario.nombreDeUsuaio}" style="width: 100%"/>
+                            </div>
+                            <div>
+                                <p:inputText id="contrasena" type="password" styleClass="form-control" placeholder="Contraseña" value="#{MbUsuario.password}" style="width: 100%"/>
+                            </div>
+                            <div>
+                                <p:outputLabel class="form-control" value="#{MbUsuario.mensaje}" rendered="#{MbUsuario.mensaje.length() > 2}"/>
+                            </div>
+                            <div>
+                                <p:commandButton style="" value="Entrar"  update=":form growl-total" actionListener="#{MbUsuario.accionLogin()}"  styleClass="btn btn-default submit" />    
+                                <a class="reset_pass" href="">Olvidaste tu contraseña?</a>
+                            </div>
+                            <div class="separator">
+                                <!--<p class="change_link">Nuevo en el sitio?
+                                    <a href="#signup" class="to_register"> Crear Cuenta </a>
+                                </p>-->
+                            </div>
+                            <div class="clearfix"></div>
+
+                        </h:form>
+                    </section>
+                </div>
+
+                <div id="register" class="animate form registration_form">
+                    <section class="login_content">
+                        <h:form id="form2">
+                            <h1>creación de cuenta</h1>
+                            <div>
+                                <p:inputText type="text" styleClass="form-control" placeholder="Nombre Usuario" />
+                            </div>
+                            <div>
+                                <p:inputText type="email" styleClass="form-control" placeholder="Correo Electronico" />
+                            </div>
+                            <div>
+                                <p:inputText type="text" styleClass="form-control" placeholder="Numero Celular" />
+                            </div>
+                            <div>
+                                <p:inputText type="password" styleClass="form-control" placeholder="Contraseña" />
+                            </div>
+                            <div>
+                                <p:inputText type="password" styleClass="form-control" placeholder="Confirmar Contraseña" />
+                            </div>
+                            <div>
+                                <br/>
+                                <p:commandButton  value="Enviar"  update=":form2 growl-total"  styleClass="btn btn-default submit" />    
+                            </div>
+                        </h:form>
+                        <div class="clearfix"></div>
+                        <div class="separator">
+                            <p class="change_link">Already a member ?
+                                <a href="#signin" class="to_register"> Iniciar sesión</a>
+                            </p>
+
+                            <div class="clearfix"></div>
+                            <br />
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
